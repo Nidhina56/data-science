@@ -1,0 +1,9 @@
+import numpy as np 
+num1=([5,4,5,2,6,1])
+num2=([3,4,7,2,6,1])
+print("a>b")
+print(np.greater (num1,num2))
+print("a>=b")
+print(np.greater_equal(num1,num2))
+print("a<b")
+print (np.less (num1,num2))
