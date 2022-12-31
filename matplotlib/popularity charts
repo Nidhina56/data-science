@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+import numpy as np
+a=np.array(["java","python","php","JavaScript","C#","C++"])
+b=np.array([22.2,17.6,8.8,8,7.7,6.7])
+plt.title("Popularity v/s programming language")
+plt.xlabel("Programming lang")
+plt.ylabel("poplularity")
+plt.bar(a,b)
+plt.show()
+plt.title("Popularity v/s programming language")
+plt.barh(a,b,color="red")
+plt.show()
+plt.title("Popularity v/s programming language")
+plt.bar(a,b,color=["red","blue","green","pink","yellow"])
+plt.show()
+plt.title("Popularity v/s programming language")
+la=["java","python","php","JavaScript","C#","C++"]
+plt.pie(b,labels=la)
+plt.show()
