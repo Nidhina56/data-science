@@ -1,0 +1,10 @@
+import pandas as pd
+dic = {'Name': ['Anoop', 'Savad', 'Abhi'],
+'Age' : [22, 25, 24],
+'Occ' : ['Engineer', 'Doctor', 'Developer']}
+df = pd.DataFrame(dic)
+print("Data frame")
+print(df)
+print("After sorting data frame by name and occ")
+d_sorted =df.sort_values(by = ['Name', 'Occ'])
+print(d_sorted)
