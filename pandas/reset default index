@@ -1,0 +1,12 @@
+import pandas as pd
+dic = {'id':[1,2,3],
+'Name': ['Anoop', 'Savad', 'Abhi'],
+'Age' : [22, 25, 23],
+'Occ' : ['Engineer', 'Doctor', 'Developer'],
+}
+df = pd.DataFrame(dic)
+print("Data frame")
+print(df)
+print("After setting default index as id")
+index=df.set_index('id')
+print(index)
