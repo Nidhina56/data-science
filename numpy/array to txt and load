@@ -1,0 +1,7 @@
+import numpy as np
+a=np.arange(12).reshape(4,3)
+print(a)
+header='col1,col2,col3'
+np.savetxt("temp.txt",a,header=header)
+res=np.loadtxt("temp.txt")
+print(res)
