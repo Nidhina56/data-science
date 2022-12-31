@@ -1,0 +1,9 @@
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({'values_1': [700, np.nan, 500, np.nan],
+                   'values_2': [np.nan, 150, np.nan, 400] 
+                   })
+df= df.replace(np.nan,0)
+
+print (df)
