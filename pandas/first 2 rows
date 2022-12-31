@@ -1,0 +1,7 @@
+import pandas as pd
+dic = {'Name': ['Anoop', 'Savad', 'Abhi'],
+'Age' : [22, 25, 23],
+'Occ' : ['Engineer', 'Doctor', 'Developer'],
+}
+df = df.head(2)
+print(df)
