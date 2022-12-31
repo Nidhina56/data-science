@@ -1,0 +1,10 @@
+import numpy as np
+import matplotlib.pyplot as plt
+x=np.array([1,2,3])
+y=np.array([1,4,5])
+plt.plot(x,y,label="Line 1")
+x1=np.array([5,7,9])
+y2=np.array([3,6,2])
+plt.plot(x1,y2,label="Line 2")
+plt.legend()
+plt.show()
