@@ -1,0 +1,15 @@
+from sklearn.datasets import load_iris
+a=load_iris()
+x=a.data
+y=a.target
+from sklearn.cluster import KMeans
+
+kmeans=KMeans(init='k-means++',n_clusters=3,n_init=10,random_state=0).fit(x)
+p=kmeans.predict(x)
+print("predicted values")
+print(p)
+
+import matplotlib.pyplot as plt
+colors=list(map(lambda x:'#3b4cc0' if x==1 else '#000000',p))
+plt.scatter(x[:,0],x[:,1],c=colors,marker='*',picker=True)
+plt.show()
