@@ -1,0 +1,48 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pandas
+import sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score,mean_squared_error
+from sklearn import linear_model
+from sklearn.datasets import load_iris
+
+x,y=load_iris(return_X_y=True)
+
+x=x[:,0:2]
+
+xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=0.25,random_state=0)
+
+c=linear_model.LinearRegression()
+
+c.fit(xtrain,ytrain)
+
+p=c.predict(xtest)
+
+r=r2_score(p,ytest)
+
+mean=mean_squared_error(p,ytest)
+
+print("\n__prediction__\n",p)
+
+print("\n__acual__\n",ytest)
+
+print("r2_score")
+
+print(r)
+
+print("mean_squared_error")
+
+print(mean)
+
+print("coefficient")
+
+print(c.coef_)
+
+print("intercept")
+
+print(c.intercept_)
+
+plt.scatter(xtest[:,0],ytest,color="red")
+plt.plot(xtest[:,0],p,color="black")
+plt.show
