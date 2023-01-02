@@ -1,0 +1,32 @@
+from sklearn.datasets import load_iris
+a=load_iris()
+x=a.data
+y=a.target
+from sklearn.model_selection import train_test_split
+xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=0.25,random_state=0)
+from sklearn import tree
+from sklearn.tree import DecisionTreeClassifier as dt,export_text
+from sklearn.metrics import accuracy_score
+
+c=dt(criterion="entropy")
+c.fit(xtrain,ytrain)
+p=c.predict(xtest)
+print("Predicted values")
+print(p)
+
+print("Actual values")
+print(ytest)
+
+print("export_text")
+e=export_text(c)
+print(e)
+
+print("Accuracy score")
+ac=accuracy_score(ytest,p)
+print(ac)
+
+from sklearn.metrics import accuracy_score
+import matplotlib.pyplot as plt
+plt.figure(figsize=(15,15))
+tree.plot_tree(c)
+plt.show
